@@ -1,11 +1,16 @@
 import smtplib
 from email.message import EmailMessage
-import os 
 import ssl #adds a layer of security
+
+import os 
+from dotenv import load_dotenv
+
 import csv
 
+load_dotenv()
+
 email_sender = "example@gmail.com"
-email_password = os.environ.get("EMAIL_PASSWORD")
+email_password = os.getenv("EMAIL_PASSWORD")
 
 print(email_password)
 

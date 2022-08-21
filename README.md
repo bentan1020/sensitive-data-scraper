@@ -10,3 +10,12 @@ measure in your Google account. Here are the steps:
 
 notes/challenges:
 - Do not name your file "email.py", this interferes with "from email.message import EmailMessage"
+- Install dotenv via command line: pip3 install python-dotenv
+
+# Load .env file using:
+from dotenv import load_dotenv
+load_dotenv()
+
+# Use the variable with:
+import os
+os.getenv("ACCESS_KEY")
