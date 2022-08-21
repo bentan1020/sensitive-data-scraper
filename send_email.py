@@ -7,7 +7,7 @@ import csv
 email_sender = "example@gmail.com"
 email_password = os.environ.get("EMAIL_PASSWORD")
 
-print(os.environ["EMAIL_PASSWORD"])
+print(email_password)
 
 subject = "Information about your data"
 body = """
@@ -54,4 +54,5 @@ csvfile_to_dict = load_data("data.csv")
 
 for dict in csvfile_to_dict:
   if dict["SSN"] != ("None" or "none"):
+    print(f"email is sending to {dict['FirstName']}")
     send_email(dict["Email"])
